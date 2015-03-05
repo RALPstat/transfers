@@ -10,6 +10,6 @@
 #
 
 class User < ActiveRecord::Base
-	has_many :receive_transfers, foreign_key: :sender_id, class_name: :Transfer
-	has_many :sent_transfers, foreign_key: :receiver_id, class_name: :Transfer
+	has_many :receive_transfers, foreign_key: :receiver_id, class_name: :Transfer
+	has_many :sent_transfers, foreign_key: :sender_id, class_name: :Transfer
 end
