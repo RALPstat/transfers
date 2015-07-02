@@ -1,28 +1,26 @@
-== README
+=Transferencias
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+El objetivo de este challenge es aprender a usar los callbacks de ActiveRecord. Para eso, vamos a crear una aplicación que nos permite hacer transferencias de dinero de un usuario a otro, y actualice sus balances.
 
-Things you may want to cover:
+==Instrucciones
 
-* Ruby version
+1. Crea una aplicación llamada transfers.
+2. Usando el generador de Rails, crea los siguientes modelos:
 
-* System dependencies
+===User
+* name
+* balance (por defecto debe ser 50,000)
 
-* Configuration
+===Transfer
+* sender (modelo User)
+* receiver (modelo User)
+* amount
 
-* Database creation
+3. Utiliza callbacks para lo siguiente:
 
-* Database initialization
+Después de crear una transferencia se debe actualizar el balance de los dos usuarios.
+Después de eliminar una transferencia se debe actualizar el balance de los dos usuarios.
+Después de actualizar una transferencia se debe actualizar el balance de los dos usuarios.
+Nota: No necesitas implementar una solución para el siguiente problema, pero ¿qué pasaría si la aplicación falla y solo alcanza a actualizar el balance de un usuario?
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+4. Publica tu solución en Github. (No necesitas crear controladores o vistas).
